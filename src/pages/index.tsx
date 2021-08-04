@@ -10,12 +10,12 @@ import styles from './home.module.scss';
 
 // Client-Side
 // Server-Side
-// Ststic Site Generation
+// Static Site Generation
 
 //post do blog 
 
 // Conteudo (SSG - Static Site Generation)
-// Coments (Client-Side)
+// Comments (Client-Side)
 
 
 interface HomeProps {
