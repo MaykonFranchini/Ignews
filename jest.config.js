@@ -4,5 +4,5 @@ module.exports = {
   transform: {
     "^.+\\.(js|ts|jsx|tsx)$": "<rootDir>/node_modules/babel-jest" 
   },
-  testEnviroment: "jsdom",
+  testEnvironment: "jsdom",
 };
