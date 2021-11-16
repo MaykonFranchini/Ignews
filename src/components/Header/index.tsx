@@ -1,14 +1,13 @@
 import styles from './styles.module.scss';
 import Image from 'next/image';
-import LogoImg from '../../../public/images/logo.svg';
 import { SignInButton } from '../SignInButton';
 import { ActiveLink } from '../ActiveLink';
 
-export function Header() {
+export function Header() { 
     return (
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
-                <Image src={LogoImg} alt="ig.news logo" />
+                <Image src='/images/logo.svg' width={150} height={70} alt="ig.news logo" priority />
                 <nav>
                     <ActiveLink activeClassName={styles.active} href='/'>
                     <a>Home</a>
