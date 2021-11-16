@@ -2,7 +2,6 @@ import { GetStaticProps } from 'next';
 
 import Head from 'next/head'
 import Image from 'next/image';
-import AvatarImg from '../../public/images/avatar.svg';
 import { SubscribeButton } from '../components/SubscribeButton';
 import { stripe } from '../services/stripe';
 import styles from './home.module.scss';
@@ -21,7 +20,7 @@ import styles from './home.module.scss';
 interface HomeProps {
   product: {
     priceId: string,
-    amount: number,
+    amount: string,
   }
 }
 
@@ -38,9 +37,11 @@ export default function Home({ product }: HomeProps) {
           <h1>News about the <span>React</span> world.</h1>
           <p>Get access to all the publications <br />
           <span>for {product.amount} /month</span></p>
-          <SubscribeButton priceId={product.priceId}/>
+
+          <SubscribeButton />
+
         </section>
-        <Image src={AvatarImg} alt="girl coding" />
+        <Image src='/images/avatar.svg' width={400} height={700} alt="girl coding" />
       </main>
     </>
   )
